@@ -1,0 +1,27 @@
+.app-Contioner {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.light{
+
+    background-color: white;
+    color: black;
+ }
+ .dark{
+    background-color: black;
+    color: white;
+ }
+
+ 
+.theme-Button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+ 
