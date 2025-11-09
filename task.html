@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1{
+            margin-top: 0% ;
+            width :200px;
+            height: 200px;
+            background-color: lightblue;
+            border-radius:20px ;
+            padding: 100px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+
+        }
+        .btn2{
+            background-color: lightcyan;
+            border-radius: 10px;
+            padding:5px;
+        }
+        .btn1{
+            cursor: pointer;
+            width:fit-content;
+            margin-top: 20px;
+        }
+
+        .first{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="first">
+    <div class="div1 ">
+        <h2>login </h2>
+        <label for="username">Username / Email:</label><br>
+  <input type="text" id="username" placeholder="Enter username or email"><br>
+  <div class="btn1">
+        <button class="btn2" onclick="otp()">Send OTP</button>
+        </div>
+        <div id="otpDisplay" style="color:black"></div>
+    </div>
+    </div>
+  <script>
+    function otp() {
+      // Generate a 6-digit random OTP
+      let otp = Math.floor(100000 + Math.random() * 900000);
+      // Display the OTP inside the div
+      document.getElementById('otpDisplay').innerText = `Your OTP is: ${otp}`;
+    }
+  </script>
+</body>
+</html>
